@@ -1,3 +1,3 @@
 export const USERS = {
-  standard: { username: 'standard_user', password: 'secret_sauce' }
+	standard: { username: "standard_user", password: "secret_sauce" },
 };
