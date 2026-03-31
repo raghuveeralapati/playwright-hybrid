@@ -21,7 +21,12 @@ jobs:
         run: npx tsc --noEmit
 
       - name: Lint (Biome)
-        run: npx @biomejs/biome check .
+        run: |
+          npx @biomejs/biome check . --write
+          git diff --exit-code
+
+      # - name: Lint (Biome)
+      #  run: npx @biomejs/biome check .
 
       - name: Run Playwright tests
         run: npx playwright test
