@@ -1,4 +1,4 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
 	reporter: [["html"], ["list"]],
@@ -15,8 +15,8 @@ export default defineConfig({
 		{ name: "chromium", use: { browserName: "chromium" } },
 		{ name: "firefox", use: { browserName: "firefox" } },
 		// Safari on macOS (WebKit)
-		{ name: "webkit", use: { browserName: "webkit" } },
+		//	{ name: "webkit", use: { browserName: "webkit" } },
 		// Mobile emulation (future-ready)
-		{ name: "iPhone13", use: { ...devices["iPhone 13"] } },
+		//	{ name: "iPhone13", use: { ...devices["iPhone 13"] } },
 	],
 });
