@@ -15,13 +15,18 @@ jobs:
         run: npm ci
 
       - name: Install browsers
-        run: npx playwright install
+        run: npx playwright install --with-deps
 
       - name: TypeScript check
         run: npx tsc --noEmit
 
       - name: Lint (Biome)
-        run: npx @biomejs/biome check .
+        run: |
+          npx @biomejs/biome check . --write
+          git diff --exit-code
+
+      # - name: Lint (Biome)
+      #  run: npx @biomejs/biome check .
 
       - name: Run Playwright tests
         run: npx playwright test
