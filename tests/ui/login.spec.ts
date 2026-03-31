@@ -8,6 +8,7 @@ test('Login + Logo Validation', async ({ page }) => {
   await login.verifyLogo();
 
   await login.login('standard_user', 'secret_sauce');
+  await page.waitForTimeout(5000); // intentionally bad
   await expect(page).toHaveURL(/inventory/);
 });
 
