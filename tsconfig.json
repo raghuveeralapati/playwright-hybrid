@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonjs",
-    "strict": true,
-    "noUnusedLocals": true,
-    "types": ["node", "@playwright/test"]
-  }
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "commonjs",
+		"strict": true,
+		"noUnusedLocals": true,
+		"types": ["node", "@playwright/test"]
+	}
 }
