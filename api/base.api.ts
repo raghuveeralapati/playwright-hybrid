@@ -1,9 +1,9 @@
-import { APIRequestContext } from '@playwright/test';
+import type { APIRequestContext } from "@playwright/test";
 
 export class BaseAPI {
-  constructor(protected request: APIRequestContext) {}
+	constructor(protected request: APIRequestContext) {}
 
-  async getRoot() {
-    return this.request.get('/');
-  }
+	async getRoot() {
+		return this.request.get("/");
+	}
 }
