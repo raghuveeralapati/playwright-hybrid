@@ -4,6 +4,6 @@
     "module": "commonjs",
     "strict": true,
     "noUnusedLocals": true,
-    "types": ["@playwright/test"]
+    "types": ["node", "@playwright/test"]
   }
 }
