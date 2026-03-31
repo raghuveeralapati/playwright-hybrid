@@ -15,7 +15,7 @@ jobs:
         run: npm ci
 
       - name: Install browsers
-        run: npx playwright install
+        run: npx playwright install --with-deps
 
       - name: TypeScript check
         run: npx tsc --noEmit
